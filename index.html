@@ -13,101 +13,120 @@
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Frontend Mentor | News homepage</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
+    <div class="overlay hidden"></div>
     <header>
       <div class="logo"><img src="./assets/images/logo.svg" alt="" /></div>
-      <ul class="nav-menu">
-        <li class="nav-links"><a href="#">Home</a></li>
-        <li class="nav-links"><a href="#">New</a></li>
-        <li class="nav-links"><a href="#">Populat</a></li>
-        <li class="nav-links"><a href="#">Trending</a></li>
-        <li class="nav-links"><a href="#">Categories</a></li>
+      <div class="menu-icon">
+        <img src="./assets/images/icon-menu.svg" alt="" />
+      </div>
+      <ul class="nav-menu hidden">
+        <div>
+          <img
+            src="./assets/images/icon-menu-close.svg"
+            class="menu-close"
+            alt="Close Menu Icon"
+          />
+        </div>
+        <li class="nav-links">Home</li>
+        <li class="nav-links">New</li>
+        <li class="nav-links">Popular</li>
+        <li class="nav-links">Trending</li>
+        <li class="nav-links">Categories</li>
       </ul>
     </header>
+    <main>
+      <section class="hero-section">
+        <div class="hero-content">
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="./assets/images/image-web-3-desktop.jpg"
+            />
+            <img src="./assets/images/image-web-3-mobile.jpg" alt="" />
+          </picture>
 
-    <section class="hero-section">
-      <div class="hero-container">
-        <picture>
-          <source
-            media="(min-width: 768px)"
-            srcset="./assets/images/image-web-3-desktop.jpg"
-          />
-          <img src="./assets/images/image-web-3-mobile.jpg" alt="" />
-        </picture>
-      </div>
-
-      <article>
-        <h1>The Bright Future of Web 3.0?</h1>
-
-        <div class="hero-text">
-          <p>
-            We dive into the next evolution of the web that claims to put the
-            power of the platforms back into the hands of the people. But is it
-            really fulfilling its promise?
-          </p>
-          <button class="read-more">Read more</button>
+          <article class="web3">
+            <h1>The Bright Future of Web 3.0?</h1>
+            <div class="web3-text">
+              <p>
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <button class="read-more">Read more</button>
+            </div>
+          </article>
         </div>
-      </article>
-      <aside></aside>
-      <h2>New</h2>
 
-      <article>
-        <h3>Hydrogen VS Electric Cars</h3>
-        <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
-      </article>
+        <aside>
+          <h2>New</h2>
 
-      <article>
-        <h3>The Downsides of AI Artistry</h3>
-        <p>
-          What are the possible adverse effects of on-demand AI image
-          generation?
-        </p>
-      </article>
+          <article>
+            <h3>Hydrogen VS Electric Cars</h3>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+            <div class="divider"></div>
+          </article>
 
-      <article>
-        <h3>Is VC Funding Drying Up?</h3>
-        <p>
-          Private funding by VC firms is down 50% YOY. We take a look at what
-          that means.
-        </p>
-      </article>
-    </section>
+          <article>
+            <h3>The Downsides of AI Artistry</h3>
+            <p>
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+            <div class="divider"></div>
+          </article>
 
-    <section>
-      <article>
-        <span>01</span>
+          <article>
+            <h3>Is VC Funding Drying Up?</h3>
+            <p>
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </article>
+        </aside>
+      </section>
 
-        <h3>What happens when old PCs are given modern upgrades?</h3>
-      </article>
-      <article>
-        <span>02</span>
-        <h3>Top 10 Laptops of 2022</h3>
-        <p>Our best picks for various needs and budgets.</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h3>The Growth of Gaming</h3>
-        <p>How the pandemic has sparked fresh opportunities.</p>
-      </article>
-    </section>
+      <!-- end hero section grid -->
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+      <section class="cards">
+        <article>
+          <img src="./assets/images/image-retro-pcs.jpg" alt="" />
+          <div class="content">
+            <span>01</span>
+            <h3>Reviving Retro PCs</h3>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </article>
+
+        <article>
+          <img src="./assets/images/image-top-laptops.jpg" alt="" />
+          <div class="content">
+            <span>02</span>
+
+            <h3>Top 10 Laptops of 2022</h3>
+            <p>Our best picks for various needs and budgets.</p>
+          </div>
+        </article>
+
+        <article>
+          <img src="./assets/images/image-gaming-growth.jpg" alt="" />
+          <div class="content">
+            <span>03</span>
+            <h3>The Growth of Gaming</h3>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div> -->
+    </main>
+    <script src="./main.js"></script>
   </body>
 </html>
